@@ -37,17 +37,6 @@ public class ConsoleCommandsImpl implements ConsoleCommands {
 		return result.size();
 	}
 
-	public double averageSalaryByDepartmentName(String departmentName) {
-		Department d = departmentRepository.findByName(departmentName);
-		List<Lector> l = lectorRepository.findByDepartments(d);
-		double averageSalary = 0.00;
-		for (int i = 0; i < l.size(); i++) {
-			averageSalary += l.get(i).getSalary();
-		}
-		averageSalary = averageSalary / l.size();
-		return averageSalary;
-	}
-
 	@Override
 	public String getDepartmentHead(String departmentName) {
 		Department d = departmentRepository.findByName(departmentName);
