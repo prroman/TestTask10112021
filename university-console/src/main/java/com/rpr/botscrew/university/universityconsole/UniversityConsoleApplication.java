@@ -49,9 +49,7 @@ public class UniversityConsoleApplication {
 			if (result.matches("exit")) {
 				working = false;
 				scanner.close();
-				System.exit(1);
 			}
 		}
 	}
-
 }
